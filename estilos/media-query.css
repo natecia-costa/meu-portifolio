@@ -1,0 +1,31 @@
+@media screen and (min-width: 768px) {
+    #inicio {
+        display: grid; 
+        grid-template-columns: 2fr 2fr;
+        padding: 70px 0 160px 0;
+    }
+    #skills article {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .container-skills {
+        width: 200px;
+        height: 250px;
+    }
+    #container-projetos {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .projetos {
+        width: 300px;
+    }
+}
+@media screen and (min-width: 852px) {
+    #inicio {
+        padding: 70px 0 230px 70px;
+    }
+    #inicio img {
+        width: 200px;
+    }
+}

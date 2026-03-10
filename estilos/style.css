@@ -1,0 +1,195 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --cor-principal: #202b4e;
+    --cor-destaque: #3e69ce;
+    --cor-fundo: #26335c28;
+    --cor-borda: rgba(255, 255, 255, 0.336);
+    --branco: white;
+    --preto: rgba(0, 0, 0, 0.685);
+}
+header {
+    background-color: var(--cor-principal);
+    text-align: end;
+    height: 50px;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-content: center;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    box-shadow: 0px 1px 5px var(--preto);
+}
+nav a {
+    font-size: 20px;
+    margin: 5px;
+    color: var(--branco);
+    padding: 10px;
+}
+nav a:hover {
+    border-bottom: 3px solid var(--cor-destaque);
+}
+main {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+    color: var(--branco);
+    background-image: url("../img/foto-fundo.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 50px;
+}
+#inicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding-bottom: 100px;
+    
+}
+h1 {
+    text-shadow: 2px 2px 3px var(--cor-borda);
+    padding-bottom: 30px;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: titulo 1s steps(13) forwards;
+}
+@keyframes titulo {
+    from {
+        width: 0;
+    }
+    to {
+        width: 13ch;
+    }
+}
+#inicio h3 {
+    color: var(--cor-destaque);
+    margin-bottom: 10px;
+}
+#inicio img {
+    width: 160px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: 0 0 5px var(--branco);
+    display: block;
+    margin: auto;
+    animation: spin 2s linear;
+    transform-style: preserve-3d;
+}
+@keyframes spin {
+    0% {
+      transform: rotateY(0deg);
+    }
+    50% {
+      transform: rotateY(180deg);
+    }
+    100% {
+      transform: rotateY(360deg);
+    }
+}
+.container-skills {
+    background-color: var(--cor-fundo);
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid  var(--cor-borda);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+#formacao-container {    
+    display: flex;
+    flex-direction: column-reverse;
+}
+.curso {
+    background-color: var(--cor-fundo);
+    border: 1px solid var(--cor-borda);
+    border-radius: 5px;
+    border-left: 5px solid var(--cor-destaque);
+    margin: 5px 15px;
+    padding: 10px;
+    transition: 0.5s;
+}
+.curso:hover {
+    border-left-width: 15px;
+    border-color: var(--cor-destaque);
+    cursor: pointer;
+}
+.instituicao {
+    color: var(--cor-destaque);
+    font-size: 1.1em;
+}
+#container-projetos {
+    display: flex;
+    flex-direction: column;
+}
+.projetos {
+    background-color: var(--cor-fundo);
+    border: 1px solid var(--cor-borda);
+    width: 300px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    margin: 15px;
+    transition: transform 0.3s ease;
+}
+.projetos:hover {
+    transform: scale(1.05);
+}
+.projetos img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    overflow: hidden;
+}
+.projetos h3, .projetos p, .projetos a {
+    padding: 10px;
+}
+.projetos a {
+    color: var(--cor-destaque);
+}
+footer {
+    background-color: var(--cor-principal);    
+    border: 1px solid var(--cor-borda);
+    color: var(--branco);
+    padding: 15px;
+}
+footer h4 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#social {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+.container-social {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+footer i {
+    background-color: var(--cor-principal);
+    border-radius: 50%;
+    color: var(--cor-destaque);    
+    border: 1px solid var(--cor-borda);
+    padding: 10px;
+}
+footer i:hover {
+    background-color: var(--cor-destaque);
+    color: var(--branco);
+}
+#github:hover {
+    background-color: black;
+}
+#instagram:hover {
+    background-color: rgb(206, 32, 104);
+}
