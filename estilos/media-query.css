@@ -20,6 +20,9 @@
     .projetos {
         width: 300px;
     }
+    #social {
+        gap: 50px;
+    }
 }
 @media screen and (min-width: 852px) {
     #inicio {
